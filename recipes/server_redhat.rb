@@ -66,6 +66,7 @@ unless platform_family?("fedora") and node['platform_version'].to_i >= 16
   template "/etc/sysconfig/pgsql/#{svc_name}" do
     source "pgsql.sysconfig.erb"
     mode "0644"
+    cookbook 'postgresql'
     notifies :restart, "service[postgresql]", :delayed
   end
 

@@ -3,7 +3,11 @@ require 'spec_helper'
 describe 'postgresql-wrapper::default' do
   # Serverspec examples can be found at
   # http://serverspec.org/resource_types.html
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
+  describe command('psql --version') do
+    its(:stdout) { should match /psql \(PostgreSQL\) 9\.4/ }
+  end
+
+  describe port(5432) do
+    it { should be_listening }
   end
 end

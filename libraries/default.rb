@@ -20,6 +20,7 @@ include Chef::Mixin::ShellOut
 
 module Opscode
   module PostgresqlHelpers
+    module ClassMethods
 
 ######################################
 # Function to build information needed to install RPM for PGDG yum repository,
@@ -45,6 +46,6 @@ def pgdgrepo_rpm_info
   return [ repo_rpm_url, repo_rpm_filename, repo_rpm_package ]
 end
 
-# End the Opscode::PostgresqlHelpers module
+    end
   end
 end
