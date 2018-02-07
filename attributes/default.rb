@@ -20,6 +20,26 @@ default['postgresql']['pgdg']['repo_rpm_url']['9.4']['centos'] = {
   }
 }
 
+default['postgresql']['pgdg']['repo_rpm_url']['9.6']['centos'] = {
+  "7" => {
+    "x86_64" => "http://yum.postgresql.org/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm"
+  },
+  "6" => {
+    "i386" => "http://yum.postgresql.org/9.6/redhat/rhel-6-i386/pgdg-centos96-9.6-3.noarch.rpm",
+    "x86_64" => "http://yum.postgresql.org/9.6/redhat/rhel-6-x86_64/pgdg-centos96-9.6-3.noarch.rpm"
+  }
+}
+
+default['postgresql']['pgdg']['repo_rpm_url']['10']['centos'] = {
+  "7" => {
+    "x86_64" => "http://yum.postgresql.org/10/redhat/rhel-7-x86_64/pgdg-centos10-10-1.noarch.rpm"
+  },
+  "6" => {
+    "i386" => "http://yum.postgresql.org/10/redhat/rhel-6-i386/pgdg-centos10-10-1.noarch.rpm",
+    "x86_64" => "http://yum.postgresql.org/10/redhat/rhel-6-x86_64/pgdg-centos10-10-1.noarch.rpm"
+  }
+}
+
 case node['platform_family']
 when 'debian', 'ubuntu'
   default['postgresql']['enable_pgdg_apt'] = true
