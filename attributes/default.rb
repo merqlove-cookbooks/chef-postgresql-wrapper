@@ -32,11 +32,11 @@ default['postgresql']['pgdg']['repo_rpm_url']['9.6']['centos'] = {
 
 default['postgresql']['pgdg']['repo_rpm_url']['10']['centos'] = {
   "7" => {
-    "x86_64" => "http://yum.postgresql.org/10/redhat/rhel-7-x86_64/pgdg-centos10-10-1.noarch.rpm"
+    "x86_64" => "http://yum.postgresql.org/10/redhat/rhel-7-x86_64/pgdg-centos10-10-2.noarch.rpm"
   },
   "6" => {
-    "i386" => "http://yum.postgresql.org/10/redhat/rhel-6-i386/pgdg-centos10-10-1.noarch.rpm",
-    "x86_64" => "http://yum.postgresql.org/10/redhat/rhel-6-x86_64/pgdg-centos10-10-1.noarch.rpm"
+    "i386" => "http://yum.postgresql.org/10/redhat/rhel-6-i386/pgdg-centos10-10-2.noarch.rpm",
+    "x86_64" => "http://yum.postgresql.org/10/redhat/rhel-6-x86_64/pgdg-centos10-10-2.noarch.rpm"
   }
 }
 
